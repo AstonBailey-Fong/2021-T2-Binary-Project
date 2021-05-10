@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>v1.06 Binary Puzzle 6x6</title>
     <script type='text/javascript'>  
-        //  21/4/21, Nev - 3 x 36 element test arrays
+        //  21/4/21, Aston - 3 x 36 element test arrays
         var G1 = [1, null, 0, null, 0, 0, null, 1, null, 0, 0, null, null, null, null, null, null, 0, 0, null, null, 1, null, null, 1, 0, null, 1, 1, null, null, 0, null, null, 1, 1];
         var G2 = [null, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
         var G3 = [null, null, 1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
@@ -17,39 +17,21 @@
             var Col = 6;                        // declare # of columns
             var Grid = [];                      // declare Grid as an array
 
-            //26/4/21, Nev - created 2 nested loops to eliminate the 6 row loops used previously
+            //26/4/21, Aston - created 2 nested loops to eliminate the 6 row loops used previously
             for (let j = 0; j < Col; j++) {
                 for (let i = 0; i < Row; i++) {
                     document.getElementById('B' + (i + 1) + (j+1)).value = G[j*Col+i];            // 0*Col
                 }
             }
-            //for (let i = 0; i < Row; i++) {
-            //    document.getElementById('B' + (i + 1) + '2').value = G[Col + i];      // 1*Col
-            //}
-            //for (let i = 0; i < Row; i++) {
-            //    document.getElementById('B' + (i + 1) + '3').value = G[2 * Col + i];  // 2*Col
-            //}
-            //for (let i = 0; i < Row; i++) {
-            //    document.getElementById('B' + (i + 1) + '4').value = G[3 * Col + i];  // 3*Col
-            //}
-            //for (let i = 0; i < Row; i++) {
-            //    document.getElementById('B' + (i + 1) + '5').value = G[4 * Col + i];  // 4*Col
-            //}
-            //for (let i = 0; i < Row; i++) {
-            //    document.getElementById('B' + (i + 1) + '6').value = G[5 * Col + i];  // 5*Col
-            //}
-
         }
 
     </script>
     <style type="text/css">
-        /* 30/7/19 Rain Holloway (2020 student) - to eliminate double lines */
         * {
             padding: 0;
             border-collapse: collapse;
         }
 
-        /* 27/7/19 Nev - for formatting of the table cells */
         .gameboard {
             width: 40px;
             height: 40px;
